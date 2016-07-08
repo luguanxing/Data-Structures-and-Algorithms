@@ -12,7 +12,7 @@ int chessdata[5][5] = {
 };
 
 struct point {
-	int x, y, direct;	//x, yÎªÎ»ÖÃ, directÎª×ßµÄÊ±ºòµÄ·½Ïò
+	int x, y, direct;	//	x, yä¸ºä½ç½®, directä¸ºèµ°çš„æ—¶å€™çš„æ–¹å‘
 	int step, hp;
 };
 point P, N, goal;
@@ -20,10 +20,10 @@ point oper[4] = {{0, -1, 1}, {0, 1, 2}, {1, 0, 3}, {-1, 0, 4}};
 
 
 
-int llk_bfs(int y1, int x1, int y2, int x2) {	//	ÓÃBFS¼ì²â(y1,x1) µ½ (y2,x2) ÓĞÃ»ÓĞ×ªÕÛ2´ÎÒÔÄÚµÄÂ·¾¶
+int llk_bfs(int y1, int x1, int y2, int x2) {	//	ç”¨BFSæ£€æµ‹(y1,x1) åˆ° (y2,x2) æœ‰æ²¡æœ‰è½¬æŠ˜2æ¬¡ä»¥å†…çš„è·¯å¾„
 
 	bool cango[50][50], isvisit[50][50];
-	int t, row = 5, col = 5;
+	int t, row = 5, col = 5;	//	æ³¨æ„colä¸ºç«–è¡Œæ•°, rowä¸ºæ¨ªè¡Œæ•°	
 
 	int temp1 = chessdata[y1][x1];
 	int temp2 = chessdata[y2][x2];
@@ -31,8 +31,8 @@ int llk_bfs(int y1, int x1, int y2, int x2) {	//	ÓÃBFS¼ì²â(y1,x1) µ½ (y2,x2) ÓĞÃ
 	chessdata[y1][x1] = 'S';
 	chessdata[y2][x2] = 'E';
 	
-	for (int i = 0; i < col; i++) {		//	¶ÔµØÍ¼µÄ±ê¼Ç
-		for (int j = 0; j < row; j++) {
+	for (int i = 0; i < row; i++) {		//	å¯¹åœ°å›¾çš„æ ‡è®°
+		for (int j = 0; j < col; j++) {
 			isvisit[i][j] = false;
 			t = chessdata[i][j];
 			if (t == 0) {
@@ -53,13 +53,13 @@ int llk_bfs(int y1, int x1, int y2, int x2) {	//	ÓÃBFS¼ì²â(y1,x1) µ½ (y2,x2) ÓĞÃ
 	}
 
 	N.step = 0;
-	N.hp = 2;	//	×ªÕÛ×î¶àÎª2´Î
+	N.hp = 2;	//	è½¬æŠ˜æœ€å¤šä¸º2æ¬¡
 	N.direct = 0;
 
 
 	queue<point> Q;
 	Q.push(N);
-	while (!Q.empty()) {	// BFS±éÀúSµãµ½EµãµÄËùÓĞÂ·¾¶
+	while (!Q.empty()) {	//	BFSéå†Sç‚¹åˆ°Eç‚¹çš„æ‰€æœ‰è·¯å¾„
 		N = Q.front();
 		Q.pop();
 		if (N.x == goal.x && N.y == goal.y) {
@@ -75,7 +75,7 @@ int llk_bfs(int y1, int x1, int y2, int x2) {	//	ÓÃBFS¼ì²â(y1,x1) µ½ (y2,x2) ÓĞÃ
 			P.hp = N.hp;
 			if (P.direct != N.direct && N.direct != 0)
 				P.hp -= 1;
-			if (P.x >= 0 && P.x <= col && P.y >= 0 && P.y <= row	//	¶Ô±ß½ç,ÖØ¸´ºÍ×ªÕÛ´ÎÊıµÄÏŞÖÆ
+			if (P.x >= 0 && P.x <= col && P.y >= 0 && P.y <= row	//	å¯¹è¾¹ç•Œ,é‡å¤å’Œè½¬æŠ˜æ¬¡æ•°çš„é™åˆ¶
 					&& !isvisit[P.y][P.x] && cango[P.y][P.x] && P.hp >= 0) {
 				isvisit[P.y][P.x] = true;
 				Q.push(P);
@@ -89,7 +89,7 @@ int llk_bfs(int y1, int x1, int y2, int x2) {	//	ÓÃBFS¼ì²â(y1,x1) µ½ (y2,x2) ÓĞÃ
 
 int main() {
 	int y1, x1, y2, x2;
-	cin >> y1 >> x1 >> y2 >> x2;	//	ÊäÈëÒª¼ì²âµÄÁ½¸öÎ»ÖÃ
+	cin >> y1 >> x1 >> y2 >> x2;	//	è¾“å…¥è¦æ£€æµ‹çš„ä¸¤ä¸ªä½ç½®
  	cout << llk_bfs(y1, x1, y2, x2) << endl;
  	return 0;
 }
