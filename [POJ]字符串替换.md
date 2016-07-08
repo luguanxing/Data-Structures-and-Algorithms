@@ -33,7 +33,7 @@ string str_replace(string s, string so, string ob) {
 		result = "Not found\n";
 	} else {
 		int lso = so.length();
-		while (s.find(so) != -1) {
+		while (s.find(so) != -1) {	//	处理所有source
 			while (s.find(so) != 0) {
 				result += s[0];
 				s.erase(s.begin());
@@ -49,7 +49,7 @@ string str_replace(string s, string so, string ob) {
 int main() {
 	string s, so, ob;
 	char ss[50000];
-	gets(ss); s = ss;
+	gets(ss); s = ss;	//	读取整行
 	gets(ss); so = ss;
 	gets(ss); ob = ss;
 	string answer = str_replace(s, so, ob);
