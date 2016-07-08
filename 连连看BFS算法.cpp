@@ -3,7 +3,7 @@
 #include <stdlib.h>
 using namespace std;
 
-int chessdata[5][5] = {
+int chessdata[5][5] = {		//	此处棋盘为举例，实际时可修改
 	{6, 0, 0, 6, 1},
 	{2, 0, 0, 3, 1},
 	{3, 5, 0, 0, 0},
