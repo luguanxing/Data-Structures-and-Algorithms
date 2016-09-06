@@ -13,7 +13,7 @@ int wei(int n) {
 }
 
 int main() {
-	for (int i = 1; i < 10000; i++) {	//从第j位分割s=i*i,看有无left + right = i
+	for (int i = 1; i < 10000; i++) {	//麓脫碌脷j脦禄路脰赂卯s=i*i,驴麓脫脨脦脼left + right = i
 		int s = i * i;
 		int l = wei(s);
 		for (int j = 1; j < l; j++) {
