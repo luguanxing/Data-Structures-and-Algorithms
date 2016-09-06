@@ -10,17 +10,17 @@ int main() {
 		return 0;
 	}
 
-	for (i = 0; i < n; i++)	//¶ÁÈëÊı¾İ
+	for (i = 0; i < n; i++)	//è¯»å…¥æ•°æ®
 		for (j = 0; j < n; j++)
 			cin >> a[i][j];
 
-	bool flag = 1;	//È¡µÚÒ»ĞĞÎª×¼
+	bool flag = 1;	//å–ç¬¬ä¸€è¡Œä¸ºå‡†
 	int sum = 0;
 	int sum2 = 0;
 	for (i = 0; i < n; i++)
 		sum += a[0][i];
 
-	for (i = 0; i < n && flag; i++) {	//ÅĞ¶Ï¸÷ĞĞ
+	for (i = 0; i < n && flag; i++) {	//åˆ¤æ–­å„è¡Œ
 		sum2 = 0;
 		for (j = 0; j < n; j++)
 			sum2 += a[i][j];
@@ -28,7 +28,7 @@ int main() {
 			flag = 0;
 	}
 
-	for (i = 0; i < n && flag; i++) {	//ÅĞ¶Ï¸÷ÁĞ
+	for (i = 0; i < n && flag; i++) {	//åˆ¤æ–­å„åˆ—
 		sum2 = 0;
 		for (j = 0; j < n; j++)
 			sum2 += a[j][i];
@@ -37,13 +37,13 @@ int main() {
 	}
 
 	sum2 = 0;
-	for (i = 0; i < n && flag; i++)	//ÅĞ¶Ï¶Ô½ÇÏß1
+	for (i = 0; i < n && flag; i++)	//åˆ¤æ–­å¯¹è§’çº¿1
 		sum2 += a[i][i];
 	if (sum2 != sum)
 		flag = 0;
 
 	sum2 = 0;
-	for (i = 0; i < n && flag; i++)	//ÅĞ¶Ï¶Ô½ÇÏß2
+	for (i = 0; i < n && flag; i++)	//åˆ¤æ–­å¯¹è§’çº¿2
 		sum2 += a[i][n - 1 -i];
 	if (sum2 != sum)
 		flag = 0;
