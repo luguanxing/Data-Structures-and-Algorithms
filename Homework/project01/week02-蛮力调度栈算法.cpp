@@ -1,14 +1,3 @@
-/*
-ÀûÓÃ¶ÓÁÐ½á¹¹ÊµÏÖ³µÏáÖØÅÅÎÊÌâ¡£³µÏáÖØÅÅÎÊÌâÈçÏÂ£º 
-Ò»ÁÐ»õ³µ¹²ÓÐn½Ú³µÏá£¬Ã¿¸ö³µÏá¶¼ÓÐ×Ô¼ºµÄ±àºÅ£¬±àºÅ·¶Î§´Ó1~n¡£
-¸ø¶¨ÈÎÒâ´ÎÐòµÄ³µÏá£¬Í¨¹ý×ª¹ìÕ¾½«³µÏá±àºÅ°´Ë³ÐòÖØÐÂÅÅ³É1~n¡£
-×ª¹ìÕ¾¹²ÓÐk¸ö»º³å¹ì£¬»º³å¹ìÎ»ÓÚÈë¹ìºÍ³ö¹ìÖ®¼ä¡£
-¿ªÊ¼Ê±£¬³µÏá´ÓÈë¹ì½øÈë»º³å¹ì£¬¾­¹ý»º³å¹ìµÄÖØÅÅºó£¬°´1~nµÄË³Ðò½øÈë³ö¹ì¡£
-»º³å¹ì°´ÕÕÏÈ½øÏÈ³ö·½Ê½£¬±àÐ´Ò»¸öËã·¨£¬½«ÈÎÒâ´ÎÐòµÄ³µÏá½øÐÐÖØÅÅ£¬
-Êä³öÃ¿¸ö»º³å¹ìÖÐµÄ³µÏá±àºÅ¡£
-*/
-
-
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -74,13 +63,13 @@ int where(int x) {
 
 void stacksort() {
 
-	int n = a.size();	//Êý×Ö1-n
+	int n = a.size();	//æ•°å­—1-n
 	int x = 1;
 
-	while (x <= n) {	//ÒÔÕÒxÎªÖÐÐÄ
+	while (x <= n) {	//ä»¥æ‰¾xä¸ºä¸­å¿ƒ
 		int p = where(x);
 
-		if (p == -1) {		//ÔÚaÇøÕ»
+		if (p == -1) {		//åœ¨aåŒºæ ˆ
 			while (a[a.size() - 1] != x) {
 				pushad(0, a[a.size() - 1]);
 				a.erase(a.end() - 1);
@@ -90,7 +79,7 @@ void stacksort() {
 			a.erase(a.end() - 1);
 			show();
 		}
-		else {			//ÔÚbÇøµÚp¸öÕ»
+		else {			//åœ¨båŒºç¬¬pä¸ªæ ˆ
 			while (stacks[p].top() != x) {
 				pushad(p + 1, stacks[p].top());
 				stacks[p].pop();
