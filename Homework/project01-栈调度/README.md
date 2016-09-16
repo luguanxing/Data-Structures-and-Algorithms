@@ -10,13 +10,15 @@
 ------
 
 <br>
-![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project01/pic/stacks.jpg?raw=true)<br>
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project01-%E6%A0%88%E8%B0%83%E5%BA%A6/pic/stacks.jpg?raw=true)<br>
+
 ## 算法思路：
 ###第i次在A区或栈[j]找第i+1个车厢，把阻碍i+1车厢的全丢入下个栈,再把i放入B区
 
-<br><br><br>
+<br><br>
 如调度(1,3,4,2)如下：<br>
-![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project01/pic/pic.jpg?raw=true)<br>
+
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project01-%E6%A0%88%E8%B0%83%E5%BA%A6/pic/pic.jpg?raw=true)<br>
 
 ## 评价
 因为每想到一个优化不能证明不会产生一个恶化，所以采用最简单暴力的方法
