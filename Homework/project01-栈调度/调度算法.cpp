@@ -62,13 +62,10 @@ int where(int x) {
 }
 
 void stacksort() {
-
 	int n = a.size();	//数字1-n
 	int x = 1;
-
 	while (x <= n) {	//以找x为中心
 		int p = where(x);
-
 		if (p == -1) {		//在a区栈
 			while (a[a.size() - 1] != x) {
 				pushad(0, a[a.size() - 1]);
@@ -79,7 +76,7 @@ void stacksort() {
 			a.erase(a.end() - 1);
 			show();
 		}
-		else {			//在b区第p个栈
+		else {			//第p个栈
 			while (stacks[p].top() != x) {
 				pushad(p + 1, stacks[p].top());
 				stacks[p].pop();
