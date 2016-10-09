@@ -1,0 +1,9 @@
+#实验3：背包问题
+假设有一个能装入总体积为T的背包和n件体积分别为W1,W2,…,Wn的物品，能否从n件物品中挑选若干件恰好装满背包，即使Wi1+Wi2+…+Wm=T，要求找出所有满足上述条件的解。例如：当T=10，各件物品的体积{1,8,4,3,5,2}时，可找到4组解：(1,4,3,2)、(1,4,5)、(8,2)和(3,5,2)。
+<br><br>
+#运行结果
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/Lab03-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/1.JPG?raw=true)
+<br><br><br><br><br>
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/Lab03-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/2.JPG?raw=true)
+<br><br><br><br><br>
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/Lab03-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/3.JPG?raw=true)
