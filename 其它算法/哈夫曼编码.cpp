@@ -134,7 +134,6 @@ void buildtree() {
 	}
 }
 
-
 void codetree() {
 	temp = "";
 	flag = false;
@@ -143,8 +142,6 @@ void codetree() {
 	flag = true;
 	v[0].right->code();
 }
-
-
 
 int main() {
 	getdata();
