@@ -175,6 +175,13 @@ int main() {
 	god.marry(&godwife);
 
 
+	infoson.name = "godson2";
+	god.givebirthto(infoson);
+	infoson.name = "godsony";
+	god.givebirthto(infoson);
+	infoson.name = "godsonj";
+	god.givebirthto(infoson);
+	infoson.name = "godsonx";
 	god.givebirthto(infoson);
 	infoson.name = "godson";
 	god.givebirthto(infoson);
@@ -182,29 +189,38 @@ int main() {
 	infowoman.name = "woman";
 	infowoman.male = false;
 	person woman(infowoman);
+	infowoman.name = "woman2";
+	person woman2(infowoman);
+
 
 	data infograndson;
 	infograndson.name = "godgrandson";
 	infograndson.male = true;
 	god.children[0]->marry(&woman);
 	god.children[0]->givebirthto(infograndson);
+	infograndson.name = "godgrandson2";
+	god.children[1]->marry(&woman2);
+	god.children[1]->givebirthto(infograndson);
+	infograndson.name = "godgrandsonkk";
+	god.children[1]->givebirthto(infograndson);
 
-	god.showinfo();
-	god.children[0]->showinfo();
-	god.children[0]->children[0]->showinfo();
-
-	god.output(0);
-
-	cout << endl;
 
 	god.children[0]->children[0]->check();
 	god.children[0]->check();	
 	god.check();
+
+	god.output(0);
+
+	cout << endl;
 
 	ancestors.push_back(&god);
 
 	vector<person*> persons;
 	persons = findperson(ancestors, "godson");
 	persons = findperson(ancestors, "godgrandson");
+
+	god.showinfo();
+	god.children[1]->showinfo();
+	god.children[0]->children[0]->showinfo();
 	return 0;
 }
