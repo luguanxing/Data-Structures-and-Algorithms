@@ -1,15 +1,16 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 using namespace std;
 
-class data {	//¸öÈËĞÅÏ¢
+class data {	//ä¸ªäººä¿¡æ¯
 	public:
 		string name;
 		bool male;
 };
 
-class person {	//¸öÈËÀà
+class person {	//ä¸ªäººç±»
 	public:
 		data info;
 
@@ -19,12 +20,13 @@ class person {	//¸öÈËÀà
 		vector<person*> children;
 
 		person(data info, person* father, person* mother);
+		person* findancestor();
 		void marry(person* spouse);
 		void divorce();
-		void givebirthto();
 		void givebirthto(data info);
 		void showinfo();
 		void check();
+		void output(int blanknum);
 };
 
 person::person(data info, person* father = NULL, person* mother = NULL) {
@@ -33,65 +35,176 @@ person::person(data info, person* father = NULL, person* mother = NULL) {
 	this->mother = mother;
 	this->spouse = NULL;
 }
+person* person::findancestor() {	//æ‰¾æœ€æ—©ç¥–å…ˆ
+	person *p = this;
+	while (p->father != NULL)
+		p = p->father;
+	return p;
+}
 void person::marry(person* spouse) {
-	if (this->spouse != NULL)	//ÒÑ½á»é²»ÄÜ½á»é
+	if (this->spouse != NULL)	//å·²ç»“å©šä¸èƒ½ç»“å©š
 		return;
-	if (this->spouse->info.male == this->info.male)		//Í¬ĞÔ²»ÄÜ½á»é
+	if (this->spouse && this->spouse->info.male == this->info.male)		//åŒæ€§ä¸èƒ½ç»“å©š
 		return;
 	this->spouse = spouse;
 	spouse->spouse = this;
 }
 void person::divorce() {
+	if (this->spouse == NULL)	//æœªç»“å©šä¸èƒ½ç¦»å©š
+		return;
 	this->spouse = NULL;
 	spouse->spouse = NULL;			
 }
-void person::givebirthto() {
-	if (this->father == NULL || this->mother  == NULL)	//ÎŞ·¨Ò»¸öÈËµÃµ½ºó´ú
-		return;
-	data info;
-	bool male;
-	string name;
-	cin >> name >> male;
-	info.name = name;
-	info.male = male;
-	person* child = new person(info, this, this->spouse);
-	children.push_back(child);
-}
 void person::givebirthto(data info) {
+	if (this->spouse == NULL)
+		return;
 	person* child = new person(info, this, this->spouse);
 	this->children.push_back(child);
 	this->spouse->children.push_back(child);
 }
-void person::showinfo();	//Êä³ö×Ô¼ºÏà¹ØĞÅÏ¢
-void person::check();	//Í³¼Æ¼Ò×å×Ü´úÊı£¬×ÜÈËÊı£¬¸÷´úÈËÊı
+void person::showinfo() {	//è¾“å‡ºè‡ªå·±ç›¸å…³ä¿¡æ¯
+	cout << "-----------------------------" << endl;
+	cout << "name: " << this->info.name << endl;
+	if (this->info.male)
+		cout << "sex: male" << endl;
+	else
+		cout << "sex: female" << endl;
+	cout << "father: ";
+	if (this->father != NULL)
+		cout << this->father->info.name << endl;
+	else
+		cout << endl;
+	cout << "mother: ";
+	if (this->mother != NULL)
+		cout << this->mother->info.name << endl;
+	else
+		cout << endl;
+	cout << "spouse: ";
+	if (this->spouse != NULL)
+		cout << this->spouse->info.name << endl;
+	else
+		cout << endl;
+	cout << "children: ";
+	vector<person*>::iterator it;
+	for (it = this->children.begin(); it !=  this->children.end(); it++)
+		if (it == this->children.begin())
+			cout << (*it)->info.name << endl;
+		else
+		cout << "\t  " << (*it)->info.name << endl;
+	cout << endl;
+	cout << "-----------------------------" << endl;
+}
+
+void person::check() { 	//ç»Ÿè®¡å®¶æ—æ€»ä»£æ•°ï¼Œæ€»äººæ•°ï¼Œå„ä»£äººæ•°
+		cout << "-----------------------------" << endl;
+        person* ancestor = this->findancestor();
+        queue<person*> traverseQueue;
+        traverseQueue.push(ancestor);
+        vector<int> genetationData;
+        genetationData.push_back(1);
+        int i, toVisitThisFloor = 1;
+        person* tempPerson;
+        while (!traverseQueue.empty()) {
+                tempPerson = traverseQueue.front();
+                for (int j = 0; j < tempPerson->children.size(); ++j) {
+                        traverseQueue.push(tempPerson->children[j]);
+                }
+                --toVisitThisFloor;
+                traverseQueue.pop();
+                if (toVisitThisFloor == 0) {
+                        toVisitThisFloor = traverseQueue.size();
+                        genetationData.push_back(toVisitThisFloor);
+                }
+        }
+        int totalPeople = 0;
+        for (i = 0; i < genetationData.size(); ++i)
+                totalPeople += genetationData[i];
+        cout << "This family has " << genetationData.size() << " generations and " << totalPeople << " people\n";
+        for (i = 0; i < genetationData.size()-1; ++i)
+                cout << "No." << i+1 << " generation has " << genetationData[i] << " people\n";
+		cout << "-----------------------------" << endl;
+}
+
+void person::output(int blanknum) {	//é€’å½’è¾“å‡ºç”·æ€§å®¶æ—æˆå‘˜
+	for (int i = 0; i < blanknum; i++)
+		cout << "   ";
+	cout << "âˆŸ____" << this->info.name;
+	vector<person*>::iterator it;
+	for (it = this->children.begin(); it !=  this->children.end(); it++) {
+		cout << "" << endl;
+		(*it)->output(blanknum+2);
+	}
+}
 
 
 
-person* findperson(string name);	//Êä³öÓĞ¹Ø¸öÈËĞÅÏ¢
-person* findancestor(string name);	//ÕÒÄ³ÈË×æÏÈ
-void output();	//µİ¹éÊä³öÄĞĞÔ¼Ò×å³ÉÔ±
+vector<person*> findperson(vector<person*> ancestors, string name) {	//è¾“å‡ºæœ‰å…³ä¸ªäººä¿¡æ¯
+        vector<person*> result;
+        for (int i = 0; i < ancestors.size(); ++i) {
+                queue<person*> traverseQueue;
+                traverseQueue.push(ancestors[i]);
+                person* tempPerson;
+                while (!traverseQueue.empty()) {
+                        tempPerson = traverseQueue.front();
+                        if (tempPerson->info.name == name) {
+                                result.push_back(tempPerson);
+                        }
+                        for (int j = 0; j < tempPerson->children.size(); ++j) {
+                                traverseQueue.push(tempPerson->children[j]);
+                        }
+                        traverseQueue.pop();
+                }
+        }
+        return result;
+}
 
 int main() {
-	
-/*
+	vector<person*> ancestors;
+
 	data info;
 	info.name = "god";
 	info.male = true;
 	person god(info);
-
 	data infowife;
 	infowife.name = "godwife";
 	infowife.male = false;
 	person godwife(infowife);
-
 	data infoson;
 	infoson.name = "godson";
 	infoson.male = true;
-
-
 	god.marry(&godwife);
-	god.givebirthto(infoson);
-*/
 
+
+	god.givebirthto(infoson);
+	infoson.name = "godson";
+	god.givebirthto(infoson);
+	data infowoman;
+	infowoman.name = "woman";
+	infowoman.male = false;
+	person woman(infowoman);
+
+	data infograndson;
+	infograndson.name = "godgrandson";
+	infograndson.male = true;
+	god.children[0]->marry(&woman);
+	god.children[0]->givebirthto(infograndson);
+
+	god.showinfo();
+	god.children[0]->showinfo();
+	god.children[0]->children[0]->showinfo();
+
+	god.output(0);
+
+	cout << endl;
+
+	god.children[0]->children[0]->check();
+	god.children[0]->check();	
+	god.check();
+
+	ancestors.push_back(&god);
+
+	vector<person*> persons;
+	persons = findperson(ancestors, "godson");
+	persons = findperson(ancestors, "godgrandson");
 	return 0;
 }
