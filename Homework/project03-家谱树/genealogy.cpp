@@ -12,7 +12,6 @@ struct data {    //个人信息
     string name;
     int id;
     bool male;
-
     data() {
         name = "";
         id = -1;
@@ -23,26 +22,18 @@ struct data {    //个人信息
 class person {    //个人类
 public:
     data info;
-
     person *father;
     person *mother;
     person *spouse;
     vector<person *> children;
-
     person(data info, person *father = NULL, person *mother = NULL);
-
     person *findancestor();
 
     void marry(person *spouse);
-
     void divorce();
-
     void givebirthto(data info);
-
     void showinfo();
-
     void check();
-
     void output(int blanknum);
 };
 
