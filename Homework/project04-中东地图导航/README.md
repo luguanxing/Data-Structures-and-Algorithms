@@ -18,6 +18,9 @@
 
 
 ## 设计
-流程图
-![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project04-%E4%B8%AD%E4%B8%9C%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/%E7%AE%80%E5%8C%96%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)<br>
-
+###流程图
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project04-%E4%B8%AD%E4%B8%9C%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/pictures/%E7%AE%80%E5%8C%96%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true)<br>
+<br>
+###软件界面
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project04-%E4%B8%AD%E4%B8%9C%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/pictures/%E5%8D%AB%E6%98%9F%E5%9C%B0%E5%9B%BE.jpg?raw=true)
+![image](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/Homework/project04-%E4%B8%AD%E4%B8%9C%E5%9C%B0%E5%9B%BE%E5%AF%BC%E8%88%AA/pictures/%E6%99%AE%E9%80%9A%E5%9C%B0%E5%9B%BE.jpg?raw=true)
