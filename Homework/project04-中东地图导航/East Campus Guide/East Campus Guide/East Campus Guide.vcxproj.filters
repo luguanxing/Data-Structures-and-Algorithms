@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\EastCampusGuide.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\East Campus Guide.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\map.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\map2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\zhengmen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\bitmap3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\map-old.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\bmp00001.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\TUSHUGUAN.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\GONGJIAOLOU.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\TONGXIANG.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\shiyanlou.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\tiyuguan.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\zhencao.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\jiacao.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\xintiandi.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\ruanyuan.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="East Campus Guide.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="East Campus GuideDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_ZHENGMEN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_TUSHUGUAN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_GONGJIAOLOU.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_TONGXIANG.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_SHIYANLOU.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_TIYUGUAN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_ZHENCAO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_JIACAO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_XINTIANDI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLG_RUANYUAN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="suanfa.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="East Campus Guide.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="East Campus GuideDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_ZHENGMEN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_TUSHUGUAN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_GONGJIAOLOU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_TONGXIANG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_SHIYANLOU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_TIYUGUAN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_ZHENCAO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_JIACAO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_XINTIANDI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLG_RUANYUAN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="East Campus Guide.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
