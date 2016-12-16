@@ -19,7 +19,7 @@ class Student{
 			this->phone = "undefined";
 		}
 		void print() {
-			cout << "Ñ§ºÅ:" <<this->id << "\tÐÔ±ð:" << 	this->sex <<  "\tÐÕÃû:" << this->name <<  "\tµç»°:" << this->phone << endl;
+			cout << "å­¦å·:" <<this->id << "\tæ€§åˆ«:" << 	this->sex <<  "\tå§“å:" << this->name <<  "\tç”µè¯:" << this->phone << endl;
 		}
 };
 
@@ -47,7 +47,7 @@ void HashTable::Show() {
 			students[i].print();
 }
 
-int HashTable::Linercheck(int id) {	//ÏßÐÔÌ½²â´¦Àí³åÍ»,idÊÇÌ½²âÊ±µÄ¹þÏ£±í¹Ø¼üÂë, ³É¹¦´¦Àí³åÍ»·µ»ØÐÂµÄ¹Ø¼üÂëÎ´½øÐÐ³åÍ»´¦Àí,Ê§°Ü·µ»Ø-1
+int HashTable::Linercheck(int id) {	//çº¿æ€§æŽ¢æµ‹å¤„ç†å†²çª,idæ˜¯æŽ¢æµ‹æ—¶çš„å“ˆå¸Œè¡¨å…³é”®ç , æˆåŠŸå¤„ç†å†²çªè¿”å›žæ–°çš„å…³é”®ç æœªè¿›è¡Œå†²çªå¤„ç†,å¤±è´¥è¿”å›ž-1
 	int ct = 0;
 	for (int i = id % HASH_MAXSIZE; ct < HASH_MAXSIZE; i++, ct++)
 		if (students[i % HASH_MAXSIZE].id == 0)
@@ -55,7 +55,7 @@ int HashTable::Linercheck(int id) {	//ÏßÐÔÌ½²â´¦Àí³åÍ»,idÊÇÌ½²âÊ±µÄ¹þÏ£±í¹Ø¼üÂë,
     return -1;
 }
 
-int HashTable::Findstudent(int id) {	//ÒÔidÎª¹Ø¼ü×Ö²éÕÒ£¬Ê§°Ü·µ»Ø-1
+int HashTable::Findstudent(int id) {	//ä»¥idä¸ºå…³é”®å­—æŸ¥æ‰¾ï¼Œå¤±è´¥è¿”å›ž-1
 	int ct = 0;
 	for (int i = id % HASH_MAXSIZE; ct < HASH_MAXSIZE; i++, ct++)
 		if (students[i % HASH_MAXSIZE].id == id)
@@ -63,7 +63,7 @@ int HashTable::Findstudent(int id) {	//ÒÔidÎª¹Ø¼ü×Ö²éÕÒ£¬Ê§°Ü·µ»Ø-1
 	return -1;
 }
 
-void HashTable::Hashcreate(Student &student) {	//ÒÔidÎª¹Ø¼ü×Ö£¬ÏÈ¼ì²â³åÍ»£¬ºó½¨Á¢¹þÏ£Êý¾Ý  
+void HashTable::Hashcreate(Student &student) {	//ä»¥idä¸ºå…³é”®å­—ï¼Œå…ˆæ£€æµ‹å†²çªï¼ŒåŽå»ºç«‹å“ˆå¸Œæ•°æ®  
 	int result = Linercheck(student.id);
 	if (result != -1) {
 		students[result].id = student.id;
@@ -71,13 +71,13 @@ void HashTable::Hashcreate(Student &student) {	//ÒÔidÎª¹Ø¼ü×Ö£¬ÏÈ¼ì²â³åÍ»£¬ºó½¨Á
 		students[result].phone = student.phone;
 		students[result].sex = student.sex;
 		size++;
-		cout << "´´½¨³É¹¦!" << endl;
+		cout << "åˆ›å»ºæˆåŠŸ!" << endl;
 	} else {
-		cout << "´´½¨Ê§°Ü!" << endl;
+		cout << "åˆ›å»ºå¤±è´¥!" << endl;
 	}
 }
 
-void HashTable::Hashdelete(int id) {	//ÒÔidÎª¹Ø¼ü×ÖÉ¾³ýÊý¾Ý
+void HashTable::Hashdelete(int id) {	//ä»¥idä¸ºå…³é”®å­—åˆ é™¤æ•°æ®
 	for (int i = id; i < HASH_MAXSIZE; i++)
 		if (students[i % HASH_MAXSIZE].id == id) {
 			students[i % HASH_MAXSIZE].id = 0;
@@ -85,22 +85,22 @@ void HashTable::Hashdelete(int id) {	//ÒÔidÎª¹Ø¼ü×ÖÉ¾³ýÊý¾Ý
 			students[i % HASH_MAXSIZE].name = "undefined";
 			students[i % HASH_MAXSIZE].phone = "undefined";
 			size--;
-			cout << "É¾³ý³É¹¦!" << endl;
+			cout << "åˆ é™¤æˆåŠŸ!" << endl;
 			return;
 		}
-	cout << "É¾³ýÊ§°Ü!" << endl;
+	cout << "åˆ é™¤å¤±è´¥!" << endl;
 }
 
 
 void showhelp() {
 	cout << "------------------------------" << endl;
-	cout << "ÊäÈëÊý×ÖÑ¡Ôñ¹¦ÄÜ" << endl;
-	cout << "0.°ïÖú" << endl;
-	cout << "1.´´½¨Ñ§Éú" << endl;
-	cout << "2.É¾³ýÑ§Éú" << endl;
-	cout << "3.²éÕÒÑ§Éú" << endl;
-	cout << "4.ÏÔÊ¾ËùÓÐ" << endl;
-	cout << "5.ÍË³ö" << endl;
+	cout << "è¾“å…¥æ•°å­—é€‰æ‹©åŠŸèƒ½" << endl;
+	cout << "0.å¸®åŠ©" << endl;
+	cout << "1.åˆ›å»ºå­¦ç”Ÿ" << endl;
+	cout << "2.åˆ é™¤å­¦ç”Ÿ" << endl;
+	cout << "3.æŸ¥æ‰¾å­¦ç”Ÿ" << endl;
+	cout << "4.æ˜¾ç¤ºæ‰€æœ‰" << endl;
+	cout << "5.é€€å‡º" << endl;
 	cout << "------------------------------" << endl;
 }
 
@@ -109,7 +109,7 @@ void showhelp() {
 int main() {
 	HashTable hashtable;
 
-	for (int i = 0; i < 180; i++) {	//²åÈë180¸ö Ñ§ÉúÊý¾Ý
+	for (int i = 0; i < 80; i++) {	//åˆ›é€ 80ä¸ª å­¦ç”Ÿæ•°æ®
 				int id = i;
 				bool sex = true;
 				char namebuff[10];
@@ -143,13 +143,13 @@ int main() {
 				string name;
 				string phone;
 
-				cout << "Ñ§ºÅ:";
+				cout << "å­¦å·:";
 				cin >> id;
-				cout << "ÐÔ±ð:(0Å®1ÄÐ)";
+				cout << "æ€§åˆ«:(0å¥³1ç”·)";
 				cin >> sex;
-				cout << "ÐÕÃû:";
+				cout << "å§“å:";
 				cin >> name;
-				cout << "µç»°:";
+				cout << "ç”µè¯:";
 				cin >> phone;
 
 				Student newone;
@@ -163,7 +163,7 @@ int main() {
 
 			case 2: {
 				int id;
-				cout << "Ñ§ºÅ:";
+				cout << "å­¦å·:";
 				cin >> id;
 
 				hashtable.Hashdelete(id);
@@ -171,12 +171,12 @@ int main() {
 
 			case 3: {
 				int id;
-				cout << "Ñ§ºÅ:";
+				cout << "å­¦å·:";
 				cin >> id;
 	
 				int result = hashtable.Findstudent(id);
 				if (result == -1)
-					cout << "Ê§°Ü" << endl;
+					cout << "å¤±è´¥" << endl;
 				else
 					hashtable.students[result].print();
 			} break;
@@ -189,7 +189,7 @@ int main() {
 					exit(0);
 			} break;
 			default:
-				cout << "Î´ÖªÖ¸Áî" << endl;
+				cout << "æœªçŸ¥æŒ‡ä»¤" << endl;
 		}
 	}
 	return 0;
