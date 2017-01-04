@@ -1,20 +1,20 @@
 /*
-Description
- ¸ø¶¨Ò»¸öÎÞÏòÍ¼£¬ÓÃ0,1,2,...,n-1´ú±íÆän¸ö¶¥µã£¬ÇóÖ¸¶¨Á½¸ö¶¥µãÖ®¼äµÄ×î¶Ì¾àÀë¡£
+	Description
+	 ç»™å®šä¸€ä¸ªæ— å‘å›¾ï¼Œç”¨0,1,2,...,n-1ä»£è¡¨å…¶nä¸ªé¡¶ç‚¹ï¼Œæ±‚æŒ‡å®šä¸¤ä¸ªé¡¶ç‚¹ä¹‹é—´çš„æœ€çŸ­è·ç¦»ã€‚
 
-Input
- 
+	Input
+	 
 
-µÚÒ»ÐÐÎª²âÊÔÑùÀý×ÜÊý£»
+	ç¬¬ä¸€è¡Œä¸ºæµ‹è¯•æ ·ä¾‹æ€»æ•°ï¼›
 
-Ö®ºóÊÇN¸ö²âÊÔÑùÀý£¬Ã¿¸ö²âÊÔÑùÀýµÄµÚÒ»ÐÐÎª4¸öÊý£º¶¥µã¸öÊýn£¬±ßÊým, ¶¥µãv1£¬ ¶¥µãv2¡£
+	ä¹‹åŽæ˜¯Nä¸ªæµ‹è¯•æ ·ä¾‹ï¼Œæ¯ä¸ªæµ‹è¯•æ ·ä¾‹çš„ç¬¬ä¸€è¡Œä¸º4ä¸ªæ•°ï¼šé¡¶ç‚¹ä¸ªæ•°nï¼Œè¾¹æ•°m, é¡¶ç‚¹v1ï¼Œ é¡¶ç‚¹v2ã€‚
 
-n m v1 v2
+	n m v1 v2
 
-Ö®ºóÊÇmÐÐÊý¶Ô£¬Ã¿¸öÊý¶Ô<s,t>±íÊ¾¶¥µãsÓë¶¥µãtÖ®¼ä´æÔÚ±ß¡£
+	ä¹‹åŽæ˜¯mè¡Œæ•°å¯¹ï¼Œæ¯ä¸ªæ•°å¯¹<s,t>è¡¨ç¤ºé¡¶ç‚¹sä¸Žé¡¶ç‚¹tä¹‹é—´å­˜åœ¨è¾¹ã€‚
 
-Output
-¶ÔÓÚÃ¿¸öÑùÀý£¬ÓÃµ¥¶ÀÒ»ÐÐÊä³ö×î¶Ì¾àÀë¡£
+	Output
+	å¯¹äºŽæ¯ä¸ªæ ·ä¾‹ï¼Œç”¨å•ç‹¬ä¸€è¡Œè¾“å‡ºæœ€çŸ­è·ç¦»ã€‚
 */
 #include <iostream>
 #include <string.h>
