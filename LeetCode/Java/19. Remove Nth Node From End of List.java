@@ -9,7 +9,6 @@ public class Remove_Nth_Node_From_End_of_List {
 	}
 	
 	public static void main(String[] args) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		ListNode n1 = new ListNode(1);
 		ListNode n2 =  new ListNode(2);
 		ListNode n3 =  new ListNode(2);
@@ -22,15 +21,15 @@ public class Remove_Nth_Node_From_End_of_List {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode fast = head;
         ListNode slow = head;
-        for(int i = 1; i <= n; i++)    	//fast½ÚµãÔÚslow½ÚµãÇ°n¸ö
+        for(int i = 1; i <= n; i++)    	//fastèŠ‚ç‚¹åœ¨slowèŠ‚ç‚¹å‰nä¸ª
             fast = fast.next;
-        if(fast == null)       			//É¾³ýÁËµÚÒ»¸ö
+        if(fast == null)       			//åˆ é™¤äº†ç¬¬ä¸€ä¸ª
             return head.next;
-        while(fast.next != null) {		//½«slowÖ¸ÏòÒªÉ¾³ý½ÚµãÇ°
+        while(fast.next != null) {		//å°†slowæŒ‡å‘è¦åˆ é™¤èŠ‚ç‚¹å‰
             fast =fast.next;
             slow = slow.next;
         }
-        slow.next = slow.next.next;		//É¾³ýslowÏÂÒ»¸ö½Úµã
+        slow.next = slow.next.next;		//åˆ é™¤slowä¸‹ä¸€ä¸ªèŠ‚ç‚¹
         return head;
     }
 	
