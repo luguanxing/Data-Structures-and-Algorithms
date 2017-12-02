@@ -47,6 +47,8 @@
 ![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/01-LCS%E7%AE%97%E6%B3%95/lcs2.jpg?raw=true)<br>
 计算方向数组
 
+<br><br><br><br><br><br>
+
 ### Java代码
 ```
 private int[][] lcs_length = null;
