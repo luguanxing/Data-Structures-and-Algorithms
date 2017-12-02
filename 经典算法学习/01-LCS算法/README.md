@@ -24,7 +24,6 @@
 	出来，这种方法判断修改的部分，往往十分准确。简而言之，百度知道、百度百科都用得上。
 ```
 
-```
 
 <br><br>
 
@@ -35,9 +34,15 @@
 	同理，Y有2n个不同子序列，从而穷举搜索法最长子序列需要指数时间O(2m . 2n)；
 (2)LCS解法:
 	动态规划解法
-	
 ```
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/01-LCS%E7%AE%97%E6%B3%95/lcs.jpg?raw=true)<br>
 
-<br><br>
+<br><br><br><br><br><br>
 
 ### LCS的实现
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/01-LCS%E7%AE%97%E6%B3%95/lcs1.jpg?raw=true)<br>
+计算LCS长度
+
+<br><br><br><br><br>
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/01-LCS%E7%AE%97%E6%B3%95/lcs2.jpg?raw=true)<br>
+计算方向数组
