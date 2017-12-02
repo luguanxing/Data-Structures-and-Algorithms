@@ -46,3 +46,37 @@
 <br><br><br><br><br>
 ![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/01-LCS%E7%AE%97%E6%B3%95/lcs2.jpg?raw=true)<br>
 计算方向数组
+
+### Java代码
+```
+private int[][] lcs_length = null;
+private int[][] lcs_direction = null;
+private List<Integer> lcs_result = new ArrayList<Integer>();
+
+public void LCS(int[] X, int[] Y) {
+	int m = X.length;
+	int n = Y.length;
+	lcs_length = new int[m+1][n+1];
+	lcs_direction = new int[m+1][n+1];
+	for (int i = 0; i <= m; i++)
+		lcs_length[i][0] = 0;
+	for (int i = 0; i <= n; i++)
+		lcs_length[0][i] = 0;
+	for (int i = 1; i <= m; i++) {
+		for (int j = 1; j <= n; j++) {
+			if (X[i-1] == Y[j-1]) {
+				lcs_length[i][j] = lcs_length[i-1][j-1] + 1;
+				lcs_direction[i][j] = 1;
+			} else if (lcs_length[i-1][j] >= lcs_length[i][j-1]) {
+				lcs_length[i][j] = lcs_length[i-1][j];
+				lcs_direction[i][j] = 2;
+			} else {
+				lcs_length[i][j] = lcs_length[i][j-1];
+				lcs_direction[i][j] = 3;
+			}
+		}
+	}
+}
+
+```
+
