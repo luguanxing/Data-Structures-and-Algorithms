@@ -49,6 +49,15 @@
 
 <br><br><br><br><br><br>
 
+### LCS的扩展
+```
+(1)计算最长递增子序列LIS:
+	将该串排序后和自身求LCS
+(2)计算最长子串:
+	当Xm不等于Yn时长度设为0
+```
+<br><br><br><br><br><br>
+
 ### Java代码
 ```
 private int[][] lcs_length = null;
