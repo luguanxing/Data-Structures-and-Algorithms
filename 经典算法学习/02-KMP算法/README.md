@@ -29,14 +29,14 @@
 <br><br><br><br><br><br>
 
 ### KMP的思想和实现
-![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp2.jpg?raw=true)
-![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp3.jpg?raw=true)
-![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp4.jpg?raw=true)
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp2.jpg?raw=true)<br>
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp3.jpg?raw=true)<br>
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp4.jpg?raw=true)<br>
 计算next数组
 
 <br><br><br><br><br>
 
-![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp5.jpg?raw=true)
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp5.jpg?raw=true)<br>
 利用next数组计算KMP
 <br><br><br><br><br><br>
 
