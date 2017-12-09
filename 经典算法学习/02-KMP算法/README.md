@@ -24,16 +24,20 @@
 	(2)KMP解法:
 		对于文本串text逐个匹配模式串pattern匹配成功则继续，失败则将模式串利用next右移至少一位
 ```
-
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp1.jpg?raw=true)
 
 <br><br><br><br><br><br>
 
 ### KMP的思想和实现
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp2.jpg?raw=true)
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp3.jpg?raw=true)
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp4.jpg?raw=true)
 计算next数组
 
 <br><br><br><br><br>
-利用next数组计算KMP
 
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/02-KMP%E7%AE%97%E6%B3%95/kmp5.jpg?raw=true)
+利用next数组计算KMP
 <br><br><br><br><br><br>
 
 ### KMP的扩展
