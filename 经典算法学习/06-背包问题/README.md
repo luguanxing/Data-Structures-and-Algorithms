@@ -1,6 +1,6 @@
 # 背包问题
 
-<br><br>
+<br>
 
 ### 背包问题的定义
 ```
@@ -93,5 +93,5 @@ int main() {
 }
 
 ```
-![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/06-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/example.jpg?raw=true)
+![img](https://github.com/luguanxing/Data-Structures-and-Algorithms/blob/master/%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/06-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/exapmple.jpg?raw=true)
 
