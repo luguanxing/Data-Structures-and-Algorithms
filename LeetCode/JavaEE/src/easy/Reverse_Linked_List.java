@@ -9,15 +9,32 @@ public class Reverse_Linked_List {
 		 int val;
 		 ListNode next;
 		 ListNode(int x) { val = x; }
+		@Override
+		public String toString() {
+			return "[" + val + "], " + next;
+		}
 	}
 
 	class Solution {
-		//常规法，逐个替换
+		//使用递归方式
 	    public ListNode reverseList(ListNode head) {
-	        if (head == null) {
-	        	return null;
-	        }
-	        if (head.next == null) {
+	    	if (head == null) {
+	    		return null;
+	    	}
+	    	if (head.next == null) {
+	    		return head;
+	    	}
+	    	
+	    	ListNode newHead = reverseList(head.next);
+	    	head.next.next = head;
+	    	head.next = null;
+
+	    	return newHead;
+	    }
+		
+		//常规法，逐个替换
+	    public ListNode reverseList_iteratively(ListNode head) {
+	        if (head == null || head.next == null) {
 	        	return head;
 	        }
 	        ListNode pre = head;
