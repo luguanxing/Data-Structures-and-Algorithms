@@ -46,4 +46,4 @@ public class Main {
 		System.out.println(Math.max(maxHalfPacketValue, packetValue - maxHalfPacketValue) * 1024);
 	}
 
-}
+} 
