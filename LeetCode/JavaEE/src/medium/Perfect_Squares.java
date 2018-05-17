@@ -12,7 +12,7 @@ public class Perfect_Squares {
 			dp[0] = 0;
 			dp[1] = 1;
 			for (int i = 2; i <= n; i++) {
-				// 是平方数则只需一个数凑，否则动态规划求拼凑的最少个数，注意由于对称只需循环到n/2
+				// 是平方数则只需一个数凑，否则动态规划求拼凑的最少个数
 				if ((int) Math.sqrt(i) * (int) Math.sqrt(i) == i) {
 					dp[i] = 1;
 				} else {
