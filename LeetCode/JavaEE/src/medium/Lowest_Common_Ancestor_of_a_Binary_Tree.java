@@ -56,4 +56,27 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree {
 		}
 	}
 	
+	class Solution_Better {
+	    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	        
+	    	// 遇到某个节点则返回
+	        if(root == null || root == p || root == q){
+	            return root;
+	        }
+	        
+	        // 向下递归，判断公共节点与左右子树的关系
+	        TreeNode left = lowestCommonAncestor(root.left, p, q);
+	        TreeNode right = lowestCommonAncestor(root.right, p, q);
+	        
+	        // 如果两边都有则本节点为分叉，否则在某子树，向下递归
+	        if(left != null && right != null){
+	            return root;
+	        }else if (left != null){
+	            return lowestCommonAncestor(left, p, q);
+	        }else {
+	            return lowestCommonAncestor(right, p, q);
+	        }
+	    }
+	}
+	
 }
